@@ -1,0 +1,66 @@
+﻿<Page x:Class="VMSCollection.RecordsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VMSCollection"
+      xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RecordsPage">
+
+    <Grid Background="#FF5ED14C">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="1" Grid.Row="1" Content="Total Visitors" FontSize="20" FontFamily="Yu Gothic UI Semibold"/>
+
+        <ScrollViewer Grid.Column="1" Grid.Row="2" ScrollViewer.HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+            <Grid>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                    <TextBox Name="vCodeHeader" Text="Visit Code" Background="PaleTurquoise" Width="150" HorizontalContentAlignment="Center" IsReadOnly="True" FontWeight="Bold"/>
+                    <TextBox Name="vNameHeader" Text="Name of Visitor" Background="PaleTurquoise" Width="150" HorizontalContentAlignment="Center" IsReadOnly="True" FontWeight="Bold"/>
+                    <TextBox Name="coyHeader" Text="Company" Background="PaleTurquoise" Width="150" HorizontalContentAlignment="Center" IsReadOnly="True" FontWeight="Bold"/>
+                    <TextBox Name="pNameHeader" Text="Person to Visit" Background="PaleTurquoise" Width="150" HorizontalContentAlignment="Center" IsReadOnly="True" FontWeight="Bold"/>
+                    <TextBox Name="pEmailHeader" Text="Person to Visit Email" Background="PaleTurquoise" Width="150" HorizontalContentAlignment="Center" IsReadOnly="True" FontWeight="Bold"/>
+                    <TextBox Name="checkinHeader" Text="Check in" Background="PaleTurquoise" Width="150" HorizontalContentAlignment="Center" IsReadOnly="True" FontWeight="Bold"/>
+                    <TextBox Name="checkoutHeader" Text="Check out" Background="PaleTurquoise" Width="150" HorizontalContentAlignment="Center" IsReadOnly="True" FontWeight="Bold"/>
+                    <TextBox Name="etaHeader" Text="Estimated Completion" Background="#FF466BEC" Foreground="White" Width="150" HorizontalContentAlignment="Center" IsReadOnly="True" FontWeight="Bold"/>
+                    <TextBox Name="statHeader" Text="Status" Background="#FF466BEC" Foreground="White" Width="150" HorizontalContentAlignment="Center" IsReadOnly="False" FontWeight="Bold"/>
+                </StackPanel>
+
+                <ScrollViewer Grid.Column="1" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                    <StackPanel Name="visitList" Orientation="Vertical"/>
+                </ScrollViewer>
+
+            </Grid>
+        </ScrollViewer>
+
+        <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
+            <Button Content="Go back" Click="OnGoBackClicked" Width="100" Height="25" Margin="0,5,5,5"/>
+            <!--<Button Content="Refresh" Click="OnRefreshClicked" Width="100" Height="25" Margin="5"/>-->
+        </StackPanel>
+    </Grid>
+</Page>

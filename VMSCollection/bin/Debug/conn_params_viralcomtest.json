@@ -1,0 +1,8 @@
+{
+  "target_host": "10.184.25.38",
+  "target_user": "benn",
+  "target_password": "Schneider6!",
+  "target_db": "test_schema",
+  "vms_table": "test_vms",
+  "vms_users": "test_users"
+}

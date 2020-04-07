@@ -1,0 +1,38 @@
+﻿<Page x:Class="VMSCollection.ExportPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VMSCollection"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ExportPage">
+
+    <Grid Background="#FF5ED14C">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="1" Grid.Row="1" Content="Export Past Records" FontSize="20" FontFamily="Yu Gothic UI Semibold"/>
+
+        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Label Content="Date Range" HorizontalAlignment="Center"/>
+            <Calendar Name="calendar" SelectionMode="SingleRange"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
+            <Button Width="100" Height="25" Content="Export" Margin="0,0,10,0" Click="OnExportClicked"/>
+            <Button Width="100" Height="25" Content="Go back" Margin="10,0" Click="OnGoBackClicked"/>
+        </StackPanel>
+    </Grid>
+</Page>

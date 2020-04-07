@@ -1,0 +1,7 @@
+{"target_host": "10.184.25.38",
+ "target_user": "benn",
+ "target_password": "Schneider6!",
+ "target_db": "penjurudb",
+ "vms_table": "vmsdb",
+  "vms_users": "vmsusers"
+}
